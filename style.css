@@ -1,0 +1,177 @@
+:root {
+  --primary-purple: #6A5ACD;
+  --dark-background: #121212;
+  --secondary-purple: #483D8B;
+  --accent-purple: #8A2BE2;
+  --text-color: #FFFFFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  background-color: var(--dark-background);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 2px solid var(--primary-purple);
+  flex-wrap: wrap; /* Allow wrapping for small screens */
+}
+
+.logo {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--text-color);
+  text-decoration: none;
+  flex: 1;
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+  flex-wrap: wrap; /* Wrap social icons on small screens */
+  flex: 1;
+}
+
+.social-links a {
+  color: var(--text-color);
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: var(--accent-purple);
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  gap: 40px;
+  flex-direction: row; /* Default to row for desktop */
+}
+
+.stream-preview {
+  flex: 1;
+  background-color: var(--secondary-purple);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  order: 1; /* Default order for desktop */
+}
+
+.stream-preview img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.stream-info {
+  flex: 1;
+  text-align: left;
+  order: 2; /* Default order for desktop */
+}
+
+.stream-info h1 {
+  font-size: 2.5rem;
+  color: var(--text-color);
+  margin-bottom: 20px;
+}
+
+.watch-live-btn {
+  display: inline-block;
+  background-color: var(--primary-purple);
+  color: var(--text-color);
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  margin-top: 20px; /* Add space above button */
+}
+
+.watch-live-btn:hover {
+  background-color: var(--accent-purple);
+}
+
+.about-section {
+  margin-top: 50px;
+  background-color: var(--secondary-purple);
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center; /* Center-align content for mobile */
+}
+
+.about-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  font-size: 1rem;
+}
+
+/* Media Queries for Smaller Screens */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column; /* Stack preview and info vertically */
+  }
+
+  .stream-preview {
+    order: 1; /* Ensure preview is on top */
+  }
+
+  .stream-info {
+    text-align: center; /* Center text for smaller screens */
+    order: 2; /* Ensure info comes below the preview */
+  }
+
+  .stream-info h1 {
+    font-size: 1.8rem;
+  }
+
+  .about-section h2 {
+    font-size: 1.5rem;
+  }
+}
+
+.header-animation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px; /* Add some space between the logo and the animation */
+  animation: pulse 2s infinite; /* Example animation */
+}
+
+.header-animation img {
+  width: 50px; /* Adjust the size as needed */
+  height: 50px;
+  object-fit: contain;
+}
+
+/* Example animation */
+@keyframes pulse {
+  0%, 100% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.1);
+  }
+}
