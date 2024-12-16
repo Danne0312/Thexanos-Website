@@ -14,7 +14,10 @@
 }
 
 body {
-  background-color: var(--dark-background);
+  background-image: url('https://img.freepik.com/free-vector/realistic-galaxy-background_23-2150884638.jpg?t=st=1734373274~exp=1734376874~hmac=7a0450bc7ea8be342311ae724e2412a3eb4b6d55f42928ebdb690249bafe34f3&w=2000');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Keeps the image fixed while scrolling */
   color: var(--text-color);
   line-height: 1.6;
 }
@@ -23,6 +26,9 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
+  background: rgba(0, 0, 0, 0.6); /* Adds transparency to make content readable */
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Optional shadow */
 }
 
 header {
