@@ -14,10 +14,10 @@
 }
 
 body {
-  background-image: url('https://img.freepik.com/free-vector/realistic-galaxy-background_23-2150884638.jpg?t=st=1734373274~exp=1734376874~hmac=7a0450bc7ea8be342311ae724e2412a3eb4b6d55f42928ebdb690249bafe34f3&w=2000');
+  background-image: url('https://images.unsplash.com/photo-1686425374911-e0d752e09806?q=80&w=3293&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed; /* Keeps the image fixed while scrolling */
+  background-attachment: fixed;
   color: var(--text-color);
   line-height: 1.6;
 }
@@ -26,9 +26,9 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  background: rgba(0, 0, 0, 0.6); /* Adds transparency to make content readable */
+  background: rgba(0, 0, 0, 0.6);
   border-radius: 12px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Optional shadow */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 header {
@@ -37,7 +37,7 @@ header {
   align-items: center;
   padding: 20px 0;
   border-bottom: 2px solid var(--primary-purple);
-  flex-wrap: wrap; /* Allow wrapping for small screens */
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -52,7 +52,7 @@ header {
   display: flex;
   gap: 20px;
   justify-content: flex-end;
-  flex-wrap: wrap; /* Wrap social icons on small screens */
+  flex-wrap: wrap;
   flex: 1;
 }
 
@@ -71,7 +71,7 @@ header {
   align-items: center;
   margin-top: 50px;
   gap: 40px;
-  flex-direction: row; /* Default to row for desktop */
+  flex-direction: row;
 }
 
 .stream-preview {
@@ -80,7 +80,7 @@ header {
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  order: 1; /* Default order for desktop */
+  order: 1;
 }
 
 .stream-preview img {
@@ -92,7 +92,7 @@ header {
 .stream-info {
   flex: 1;
   text-align: left;
-  order: 2; /* Default order for desktop */
+  order: 2;
 }
 
 .stream-info h1 {
@@ -110,7 +110,7 @@ header {
   border-radius: 8px;
   font-weight: bold;
   transition: background-color 0.3s ease;
-  margin-top: 20px; /* Add space above button */
+  margin-top: 20px;
 }
 
 .watch-live-btn:hover {
@@ -122,7 +122,7 @@ header {
   background-color: var(--secondary-purple);
   padding: 30px;
   border-radius: 12px;
-  text-align: center; /* Center-align content for mobile */
+  text-align: center;
 }
 
 .about-section h2 {
@@ -134,50 +134,80 @@ header {
   font-size: 1rem;
 }
 
-/* Media Queries for Smaller Screens */
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column; /* Stack preview and info vertically */
-  }
-
-  .stream-preview {
-    order: 1; /* Ensure preview is on top */
-  }
-
-  .stream-info {
-    text-align: center; /* Center text for smaller screens */
-    order: 2; /* Ensure info comes below the preview */
-  }
-
-  .stream-info h1 {
-    font-size: 1.8rem;
-  }
-
-  .about-section h2 {
-    font-size: 1.5rem;
-  }
-}
-
 .header-animation {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 10px; /* Add some space between the logo and the animation */
-  animation: pulse 2s infinite; /* Example animation */
+  margin-left: 10px;
+  animation: pulse 2s infinite;
 }
 
 .header-animation img {
-  width: 50px; /* Adjust the size as needed */
+  width: 50px;
   height: 50px;
   object-fit: contain;
 }
 
-/* Example animation */
 @keyframes pulse {
   0%, 100% {
       transform: scale(1);
   }
   50% {
       transform: scale(1.1);
+  }
+}
+
+/* Media Queries for Smaller Screens */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .social-links {
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .hero {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .stream-preview {
+    order: 1;
+    max-width: 100%;
+    border-radius: 8px;
+  }
+
+  .stream-preview img {
+    max-height: 200px;
+    object-fit: cover;
+  }
+
+  .stream-info {
+    text-align: center;
+    order: 2;
+  }
+
+  .stream-info h1 {
+    font-size: 1.8rem;
+  }
+
+  .watch-live-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+
+  .about-section {
+    padding: 20px;
+  }
+
+  .about-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-section p {
+    font-size: 0.9rem;
   }
 }
